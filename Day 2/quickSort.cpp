@@ -4,11 +4,11 @@ using namespace std;
 
 int partition(int arr[], int l, int h ){
 	int pv = l;
-	int i = l+1;
+	int i = l;
 	int j = h;
 	while(i < j){
 		
-		while(i < h && arr[i] <= arr[pv]){
+		while(i < h && arr[i] < arr[pv]){
 			i++;
 		}
 		while(arr[j] > arr[pv]){
@@ -39,9 +39,9 @@ void quickSort(int arr[], int l, int h ){
 
 int main(){
 	
-	int arr[] = {10,3,8,2,1,9,4,6,7};
-	quickSort(arr,0,8);
-	for(int i=0; i< 9; i++){
+	int arr[] = {12 ,5, 787, 1, 23};
+	quickSort(arr,0,4);
+	for(int i=0; i< 5; i++){
 		cout << arr[i] << "-> "; 
 	}
 	
