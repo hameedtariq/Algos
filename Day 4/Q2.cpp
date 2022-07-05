@@ -1,0 +1,17 @@
+/*
+	LINK: https://practice.geeksforgeeks.org/problems/palindrome-string0817/1#
+
+*/
+
+
+int isPalindrome(string S)
+{
+    
+    int i = 0, j = S.length() - 1;
+    while(i < j){
+        if(S[i++] != S[j--]){
+            return false;
+        }
+    }
+    return true;
+}
